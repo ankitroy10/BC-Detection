@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,134 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BC_Detect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1" highlightedImage="background_1" translatesAutoresizingMaskIntoConstraints="NO" id="z7C-rT-fPV">
+                                <rect key="frame" x="-396" y="-288" width="963" height="1351"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4og-VU-ry1">
+                                <rect key="frame" x="290" y="44" width="71" height="31.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" image="square.and.arrow.up" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="25" scale="default"/>
+                                </state>
+                                <connections>
+                                    <action selector="upload:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e85-2g-b8S"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="Gvw-j1-2Fg">
+                                <rect key="frame" x="13" y="162" width="348" height="339"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="alF-mh-bD6">
+                                <rect key="frame" x="25" y="535" width="325" height="41"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ixt-A1-Pk4">
+                                        <rect key="frame" x="0.0" y="0.0" width="325" height="41"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="AcademyEngravedLetPlain" family="Academy Engraved LET" pointSize="24"/>
+                                        <state key="normal" title="View Results">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="viewResultsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5DH-4V-VvS"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yQg-0N-WSz">
+                                        <rect key="frame" x="0.0" y="0.0" width="325" height="0.0"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="AcademyEngravedLetPlain" family="Academy Engraved LET" pointSize="24"/>
+                                        <state key="normal" title="Diagnosis:">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7gL-Ep-POW">
+                                        <rect key="frame" x="0.0" y="0.0" width="325" height="0.0"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="AcademyEngravedLetPlain" family="Academy Engraved LET" pointSize="32"/>
+                                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Inconclusive">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hEB-rc-58V">
+                                        <rect key="frame" x="0.0" y="0.0" width="325" height="0.0"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="AcademyEngravedLetPlain" family="Academy Engraved LET" pointSize="19"/>
+                                        <state key="normal" title="          Probability (Confidence)           ">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D4e-Dp-Ops">
+                                        <rect key="frame" x="0.0" y="0.0" width="325" height="0.0"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="AcademyEngravedLetPlain" family="Academy Engraved LET" pointSize="32"/>
+                                        <state key="normal" title="0.0000">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Lesion or Mammogram" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V84-vn-GnU">
+                                <rect key="frame" x="25" y="86" width="323" height="28.666666666666671"/>
+                                <fontDescription key="fontDescription" name="AcademyEngravedLetPlain" family="Academy Engraved LET" pointSize="24"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="PhQ-Lg-cmG">
+                                <rect key="frame" x="76" y="122" width="223" height="32"/>
+                                <segments>
+                                    <segment title="Lesion"/>
+                                    <segment title="Mammogram"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PhQ-Lg-cmG" secondAttribute="trailing" constant="76" id="1TS-Nu-tCs"/>
+                            <constraint firstAttribute="bottom" secondItem="Gvw-j1-2Fg" secondAttribute="bottom" constant="311" id="9pv-pP-Z3F"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4og-VU-ry1" secondAttribute="trailing" constant="14" id="Ctk-R1-myE"/>
+                            <constraint firstItem="z7C-rT-fPV" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="-288" id="D9K-dl-Ulq"/>
+                            <constraint firstItem="Gvw-j1-2Fg" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="162" id="HLh-I9-8YG"/>
+                            <constraint firstItem="alF-mh-bD6" firstAttribute="top" secondItem="Gvw-j1-2Fg" secondAttribute="bottom" constant="34" id="I77-Tp-SiR"/>
+                            <constraint firstItem="Gvw-j1-2Fg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="13" id="JMj-ZJ-d4D"/>
+                            <constraint firstItem="z7C-rT-fPV" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="192" id="PfE-9a-j45"/>
+                            <constraint firstItem="PhQ-Lg-cmG" firstAttribute="top" secondItem="V84-vn-GnU" secondAttribute="bottom" constant="7.3300000000000001" id="RnX-L1-8e7"/>
+                            <constraint firstItem="4og-VU-ry1" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="44" id="TNx-vZ-U2t"/>
+                            <constraint firstAttribute="bottom" secondItem="z7C-rT-fPV" secondAttribute="bottom" constant="-251" id="Two-x6-jYK"/>
+                            <constraint firstItem="alF-mh-bD6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="YyQ-8K-v8V"/>
+                            <constraint firstItem="z7C-rT-fPV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-396" id="axv-x7-L49"/>
+                            <constraint firstItem="V84-vn-GnU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="bei-Hu-qZX"/>
+                            <constraint firstItem="PhQ-Lg-cmG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="76" id="iKk-f7-aez"/>
+                            <constraint firstItem="V84-vn-GnU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="42" id="mQX-jC-iue"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="V84-vn-GnU" secondAttribute="trailing" constant="27" id="uJt-VH-3vt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="alF-mh-bD6" secondAttribute="trailing" constant="25" id="ubO-jm-Pzc"/>
+                            <constraint firstItem="4og-VU-ry1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="290" id="yaE-SM-BLZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Gvw-j1-2Fg" secondAttribute="trailing" constant="14" id="ynb-2h-vik"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="choice" destination="PhQ-Lg-cmG" id="rzb-Ed-uFD"/>
+                        <outlet property="mammogram" destination="Gvw-j1-2Fg" id="9Nf-GX-9aK"/>
+                        <outletCollection property="menus" destination="yQg-0N-WSz" collectionClass="NSMutableArray" id="gJN-oQ-2sK"/>
+                        <outletCollection property="menus" destination="7gL-Ep-POW" collectionClass="NSMutableArray" id="tdL-Sq-jfY"/>
+                        <outletCollection property="menus" destination="hEB-rc-58V" collectionClass="NSMutableArray" id="vOS-Na-WJc"/>
+                        <outletCollection property="menus" destination="D4e-Dp-Ops" collectionClass="NSMutableArray" id="f1B-TJ-wk5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="113.79310344827587"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="1" width="500" height="500"/>
+        <image name="background_1" width="640" height="1136"/>
+        <image name="defaultPhoto" width="1080" height="1080"/>
+        <image name="square.and.arrow.up" catalog="system" width="56" height="64"/>
+    </resources>
 </document>
